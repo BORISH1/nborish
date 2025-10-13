@@ -1,7 +1,15 @@
 // app/layout.tsx
-
 import './globals.css';
-import GlobalWaterBackground from '@/components/Animation/GlobalWaterBackground'; // Re-added
+import GlobalWaterBackground from '@/components/Animation/GlobalWaterBackground';
+import { Poppins } from 'next/font/google';
+
+// Optimize font loading with next/font
+const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-poppins',
+});
 
 export const metadata = {
   title: 'Nborish - Full Stack Developer',
@@ -14,13 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-      </head>
-      <body>
+    <html lang="en" className={poppins.variable}>
+      <body className={poppins.className}>
         {/* GLOBAL ANIMATED BACKGROUND */}
         <GlobalWaterBackground /> 
         

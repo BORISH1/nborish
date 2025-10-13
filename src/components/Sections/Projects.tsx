@@ -1,14 +1,30 @@
 // components/Sections/Projects.tsx
 'use client';
 
-import AnimateInView from '../Animation/AnimateInView';
 import { motion } from 'framer-motion';
 import { FiGithub, FiExternalLink, FiArrowRight } from 'react-icons/fi';
 
-const projects = [
+// Define TypeScript interfaces
+interface Project {
+  title: string;
+  description: string;
+  tags: string[];
+  githubLink: string;
+  liveLink: string;
+  image: string;
+  stats: string[];
+  color: string;
+}
+
+interface ProjectCardProps {
+  project: Project;
+  index: number;
+}
+
+const projects: Project[] = [
   {
-    title: "Rohini Store -used books sell and buy",
-    description: "A full-featured e-commerce platform for buying and selling used books, built with html , css and javascript.",
+    title: "Rohini Store - used books sell and buy",
+    description: "A full-featured e-commerce platform for buying and selling used books, built with html, css and javascript.",
     tags: ["Html", "Css", "JavaScript"],
     githubLink: "https://github.com/yourusername/project-one",
     liveLink: "https://demo-project-one.vercel.app",
@@ -17,8 +33,8 @@ const projects = [
     color: "from-cyan-400 to-blue-500"
   },
   {
-    title: "SkilledLink -Local job connect",
-    description: "just a clone of linkdin with nextjs and tailwind css",
+    title: "SkilledLink - Local job connect",
+    description: "Just a clone of LinkedIn with Next.js and Tailwind CSS",
     tags: ["Next.js", "Server Actions", "PostgreSQL", "Socket.io", "Real-time"],
     githubLink: "https://github.com/yourusername/project-two",
     liveLink: "https://miniproject-1dlo.vercel.app/",
@@ -27,9 +43,9 @@ const projects = [
     color: "from-purple-400 to-pink-500"
   },
   {
-    title: " Portfolio Site",
+    title: "Portfolio Site",
     description: "A statically generated blog and portfolio using Next.js and Markdown (MDX) for content management with optimized SEO and performance.",
-    tags: ["Next.js","SEO Optimization"],
+    tags: ["Next.js", "SEO Optimization"],
     githubLink: "https://github.com/yourusername/this-project",
     liveLink: "https://nborish.vercel.app",
     image: "/projects/portfolio-blog.jpg",
@@ -38,7 +54,7 @@ const projects = [
   },
 ];
 
-const ProjectCard = ({ project, index }: { project: any; index: number }) => {
+const ProjectCard = ({ project, index }: ProjectCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50, scale: 0.95 }}

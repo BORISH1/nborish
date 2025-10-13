@@ -19,7 +19,11 @@ const itemVariants = {
   visible: { 
     opacity: 1, 
     y: 0, 
-    transition: { type: 'spring', stiffness: 100, damping: 10 }
+    transition: { 
+      type: 'spring' as const, 
+      stiffness: 100, 
+      damping: 10 
+    }
   },
 };
 
@@ -45,7 +49,7 @@ const Hero = () => {
           </motion.h2>
 
           <motion.p variants={itemVariants} className="text-base md:text-lg text-white/70 leading-relaxed mb-8 max-w-xl mx-auto md:mx-0 font-light">
-            Crafting seamless digital experiences with modern web technologies. Let's build something amazing together!
+            Crafting seamless digital experiences with modern web technologies. Let&apos;s build something amazing together!
           </motion.p>
           
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mb-8">
@@ -63,7 +67,7 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
               className="inline-block py-3 px-8 text-lg font-semibold rounded-full border border-white/50 text-white shadow-lg hover:bg-white/10 transition duration-300 backdrop-blur-sm"
             >
-              Let's Talk
+              Let&apos;s Talk
             </motion.a>
           </motion.div>
 
@@ -104,7 +108,7 @@ const Hero = () => {
       <motion.div
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay: 1, type: 'spring', stiffness: 50 }}
+        transition={{ duration: 1, delay: 1, type: 'spring' as const, stiffness: 50 }}
         className="relative w-full md:w-1/2 flex justify-center items-center p-4 md:p-0"
       >
         <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] flex justify-center items-center">
@@ -115,7 +119,7 @@ const Hero = () => {
           <div className="relative w-full h-full rounded-full border-2 border-cyan-400/30 backdrop-blur-sm bg-white/5 p-2">
             <Image
               src="/profile-dark.jpg" 
-              alt="Jacob Aiden"
+              alt="Ningombam Borish Singh"
               fill
               className="rounded-full object-cover opacity-90"
               priority 

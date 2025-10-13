@@ -1,10 +1,24 @@
 // components/Sections/Services.tsx
 'use client';
 
-import AnimateInView from '../Animation/AnimateInView';
 import { motion } from 'framer-motion';
 
-const servicesList = [
+// Define TypeScript interfaces
+interface Service {
+  title: string;
+  icon: string;
+  description: string;
+  features: string[];
+  color: string;
+  delay: number;
+}
+
+interface ServiceCardProps {
+  service: Service;
+  index: number;
+}
+
+const servicesList: Service[] = [
   { 
     title: "Custom Web Development", 
     icon: "💻", 
@@ -39,7 +53,7 @@ const servicesList = [
   },
 ];
 
-const ServiceCard = ({ service, index }: { service: any; index: number }) => {
+const ServiceCard = ({ service }: ServiceCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50, scale: 0.9 }}
@@ -160,7 +174,7 @@ const Services = () => {
           <div className="inline-flex flex-col sm:flex-row items-center gap-6 p-8 rounded-3xl backdrop-blur-lg bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/20">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-white mb-2">Ready to start your project?</h3>
-              <p className="text-white/70 text-lg font-light">Let's discuss how I can help bring your ideas to life.</p>
+              <p className="text-white/70 text-lg font-light">Let&apos;s discuss how I can help bring your ideas to life.</p>
             </div>
             <motion.a
               href="#contact"

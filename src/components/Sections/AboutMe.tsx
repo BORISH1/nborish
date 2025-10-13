@@ -36,7 +36,7 @@ const AboutMe = () => {
             {/* Introduction */}
             <div className="space-y-6">
               <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-                Hello! I'm <span className="text-cyan-300">Ningombam Borish Singh</span>
+                Hello! I&apos;m <span className="text-cyan-300">Ningombam Borish Singh</span>
               </h3>
               <p className="text-lg md:text-xl text-white/80 leading-relaxed font-normal tracking-wide">
                 A passionate <span className="text-cyan-300 font-semibold">Full Stack Developer</span> with a focus on creating intuitive, high-performance user experiences. My expertise lies in building dynamic web applications with modern frameworks.
@@ -138,7 +138,7 @@ const AboutMe = () => {
               className="text-center p-6 rounded-2xl backdrop-blur-lg bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-400/20"
             >
               <p className="text-lg italic text-white/80 font-light leading-relaxed">
-                "Turning complex problems into simple, beautiful designs"
+                &quot;Turning complex problems into simple, beautiful designs&quot;
               </p>
             </motion.div>
           </motion.div>

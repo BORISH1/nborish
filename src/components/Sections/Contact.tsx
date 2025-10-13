@@ -1,7 +1,7 @@
+// components/Sections/Contact.tsx
 'use client';
 
 import React, { useState } from 'react';
-import AnimateInView from '../Animation/AnimateInView';
 import { motion } from 'framer-motion';
 import {
   FiMail,
@@ -103,11 +103,11 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-500 bg-clip-text text-transparent">
-            Let's Connect
+            Let&apos;s Connect
           </h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full shadow-lg shadow-cyan-400/30 mb-6"></div>
           <p className="text-xl md:text-2xl text-white/70 font-light tracking-wide max-w-3xl mx-auto leading-relaxed">
-            Ready to bring your next project to life? Let's discuss how we can work together to
+            Ready to bring your next project to life? Let&apos;s discuss how we can work together to
             create something amazing.
           </p>
         </motion.div>

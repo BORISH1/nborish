@@ -4,7 +4,25 @@
 import { motion } from 'framer-motion';
 import AnimateInView from '../Animation/AnimateInView';
 
-const skillsCategories = [
+// Define TypeScript interfaces
+interface Skill {
+  name: string;
+  level: number;
+  color: string;
+}
+
+interface SkillCategory {
+  category: string;
+  icon: string;
+  skills: Skill[];
+}
+
+interface SkillBarProps {
+  skill: Skill;
+  index: number;
+}
+
+const skillsCategories: SkillCategory[] = [
   {
     category: "Frontend Development",
     icon: "⚡",
@@ -39,7 +57,7 @@ const skillsCategories = [
   }
 ];
 
-const SkillBar = ({ skill, index }: { skill: any; index: number }) => {
+const SkillBar = ({ skill, index }: SkillBarProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, x: -20 }}

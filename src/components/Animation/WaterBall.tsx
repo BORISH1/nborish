@@ -20,20 +20,20 @@ const WaterBall = ({
 }: WaterBallProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  const getIntensityValues = () => {
-    switch (intensity) {
-      case 'high':
-        return { waves: 8, speed: 0.02, amplitude: 25 };
-      case 'medium':
-        return { waves: 6, speed: 0.015, amplitude: 20 };
-      case 'low':
-        return { waves: 4, speed: 0.01, amplitude: 15 };
-      default:
-        return { waves: 6, speed: 0.015, amplitude: 20 };
-    }
-  };
-
   useEffect(() => {
+    const getIntensityValues = () => {
+      switch (intensity) {
+        case 'high':
+          return { waves: 8, speed: 0.02, amplitude: 25 };
+        case 'medium':
+          return { waves: 6, speed: 0.015, amplitude: 20 };
+        case 'low':
+          return { waves: 4, speed: 0.01, amplitude: 15 };
+        default:
+          return { waves: 6, speed: 0.015, amplitude: 20 };
+      }
+    };
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -138,7 +138,7 @@ const WaterBall = ({
       clearTimeout(startTimeout);
       cancelAnimationFrame(animationId);
     };
-  }, [animationDelay, color, intensity]);
+  }, [animationDelay, color, intensity]); // Now all dependencies are properly included
 
   return (
     <div className={`absolute ${size} ${positionClasses}`}>
