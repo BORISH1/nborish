@@ -1,33 +1,33 @@
 // app/page.tsx
-
-import Navbar from '@/components/Layout/Navbar';
 import Hero from '@/components/Sections/Hero';
 import AboutMe from '@/components/Sections/AboutMe';
-import Education from '@/components/Sections/Education'; // New
-import Skills from '@/components/Sections/Skills';       // New
-import Services from '@/components/Sections/Services';
+import Skills from '@/components/Sections/Skills';
 import Projects from '@/components/Sections/Projects';
+import Services from '@/components/Sections/Services';
+import Education from '@/components/Sections/Education';
 import Contact from '@/components/Sections/Contact';
+import MobileNav from '@/components/Navigation/MobileNav';
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <>
-      <Navbar /> 
+    <main className="relative overflow-hidden">
+      <MobileNav />
+      <Hero />
+      <AboutMe />
+      <Skills />
+      <Projects />
+      <Services />
+      <Education />
+      <Contact />
       
-      <main>
-        <Hero />
-        <AboutMe />
-        <Education /> {/* Added */}
-        <Skills />    {/* Added */}
-        <Services />
-        <Projects />
-        <Contact />
-        
-        {/* Simple Footer */}
-        <footer className="py-6 text-center text-sm text-secondary-text relative z-10" style={{ backgroundColor: 'var(--background)' }}>
-          &copy; {new Date().getFullYear()} Borish Ningombam. All rights reserved.
-        </footer>
-      </main>
-    </>
+      {/* Floating back to top button */}
+      <a
+        href="#home"
+        className="fixed bottom-6 right-6 p-3 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-lg hover:bg-white/20 transition-all duration-300 z-50"
+        aria-label="Back to top"
+      >
+        ↑
+      </a>
+    </main>
   );
 }

@@ -1,20 +1,9 @@
-// app/layout.tsx
+// app/layout.tsx (or your main layout file)
+import { Inter } from 'next/font/google';
+import Background from '@/components/Background';
 import './globals.css';
-import GlobalWaterBackground from '@/components/Animation/GlobalWaterBackground';
-import { Poppins } from 'next/font/google';
 
-// Optimize font loading with next/font
-const poppins = Poppins({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['300', '400', '500', '600', '700', '800'],
-  variable: '--font-poppins',
-});
-
-export const metadata = {
-  title: 'Nborish - Full Stack Developer',
-  description: 'Modern portfolio of N Borish, a Developer specializing in Next.js.',
-};
+const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({
   children,
@@ -22,12 +11,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={poppins.variable}>
-      <body className={poppins.className}>
-        {/* GLOBAL ANIMATED BACKGROUND */}
-        <GlobalWaterBackground /> 
-        
-        {children}
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.className} text-white overflow-x-hidden`}>
+        <Background />
+        <div className="relative z-10">
+          {children}
+        </div>
       </body>
     </html>
   );

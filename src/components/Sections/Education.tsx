@@ -1,7 +1,6 @@
 // components/Sections/Education.tsx
 'use client';
 
-import AnimateInView from '../Animation/AnimateInView';
 import { motion } from 'framer-motion';
 
 const educationHistory = [
@@ -26,7 +25,6 @@ const educationHistory = [
 const Education = () => {
   return (
     <section id="education" className="py-20 relative z-10 bg-transparent">
-      <AnimateInView className="max-w-6xl mx-auto px-6 md:px-8">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -148,7 +146,6 @@ const Education = () => {
             </p>
           </div>
         </motion.div>
-      </AnimateInView>
     </section>
   );
 };

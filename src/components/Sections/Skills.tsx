@@ -2,7 +2,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import AnimateInView from '../Animation/AnimateInView';
 
 // Define TypeScript interfaces
 interface Skill {
@@ -90,7 +89,6 @@ const SkillBar = ({ skill, index }: SkillBarProps) => {
 const Skills = () => {
   return (
     <section id="skills" className="py-20 relative z-10 bg-transparent">
-      <AnimateInView className="max-w-6xl mx-auto px-6 md:px-8">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -195,7 +193,6 @@ const Skills = () => {
             Start a Project
           </motion.a>
         </motion.div>
-      </AnimateInView>
     </section>
   );
 };
