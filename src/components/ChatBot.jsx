@@ -32,7 +32,13 @@ function generateResponse(text, profile, lastTopic) {
 
   // Check for specific project deep-dive
   const matchedProject = getProjectByName(profile.projects, lower);
-  if (matchedProject && !matchesAny(lower, ["all", "list", "every"])) {
+  
+  if (matchesAny(lower, ["olivia"])) {
+    response = "wish you a happy life";
+    topic = "olivia";
+    quickReplies = QUICK_REPLIES.initial;
+  }
+  else if (matchedProject && !matchesAny(lower, ["all", "list", "every"])) {
     response = `**${matchedProject.name}**\n\n${matchedProject.description}\n\n🔧 Tech: ${matchedProject.tags.join(", ")}${matchedProject.link ? `\n🔗 Live: ${matchedProject.link}` : ""}`;
     topic = "project-detail";
     quickReplies = QUICK_REPLIES.projects;
@@ -101,9 +107,8 @@ function generateResponse(text, profile, lastTopic) {
     quickReplies = QUICK_REPLIES.general;
   }
   // Relationship / funny
-  else if (matchesAny(lower, ["single", "dating", "girlfriend", "relationship", "love"])) {
-    const rel = profile.life?.relationship;
-    response = `💻 ${rel?.funny_note || "He's currently focused on code!"}\n\n📋 Dating requirements:\n${(rel?.requirements || []).map((r) => `• ${r}`).join("\n")}\n\n${rel?.dating_status || ""}`;
+  else if (matchesAny(lower, ["single", "dating", "girlfriend", "relationship", "love", "marriage", "married", "wife", "husband"])) {
+    response = "I am single 😊\n\nMy only long-term commitment right now is to writing bug-free code (and even that relationship is pretty complicated). If you know someone who finds Git commit messages romantic, send them my way! 💻❤️";
     topic = "relationship";
     quickReplies = ["Fun facts", "Personality", "Developer jokes"];
   }
