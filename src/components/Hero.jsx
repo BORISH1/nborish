@@ -66,21 +66,18 @@ export default function Hero({ profile }) {
           </div>
         </div>
         
-        <div className="hero-image" style={{ flex: '1 1 300px', display: 'flex', justifyContent: 'center', position: 'relative', zIndex: 1 }}>
-          <div className="hero-profile-anim" style={{ position: 'relative', width: '100%', maxWidth: '300px', aspectRatio: '1/1' }}>
+        <div className="hero-image" style={{ flex: '1 1 500px', display: 'flex', justifyContent: 'center', position: 'relative', zIndex: 1 }}>
+          <div className="hero-profile-anim" style={{ position: 'relative', width: '100%', maxWidth: '500px' }}>
             <div className="hero-profile-glow" aria-hidden="true" />
             <img 
               src="/profile.png" 
               alt={`${profile.name} Profile`} 
               style={{ 
                 width: "100%", 
-                height: "100%", 
-                borderRadius: "50%",
+                height: "auto",
                 objectFit: "cover",
                 position: "relative",
-                zIndex: 2,
-                border: "2px solid rgba(139, 92, 246, 0.3)",
-                boxShadow: "0 0 40px rgba(139, 92, 246, 0.15)"
+                zIndex: 2
               }} 
             />
           </div>
