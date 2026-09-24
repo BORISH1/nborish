@@ -5,12 +5,12 @@
     "AI/ML Engineer",
     "Technical Writer"
   ],
-  "tagline": "Computer Science undergraduate building AI-driven systems — from computer vision on construction sites to explainable models for medical imaging.",
+  "tagline": "Computer Science undergraduate with an Honours specialization in Artificial Intelligence and Machine Learning, passionate about building intelligent systems and solving real-world problems through technology. An aspiring young researcher exploring AI, machine learning, and emerging technologies.",
   "location": "Thoubal, Manipur, India",
 
   "contact": {
     "phone": "+91-9612024828",
-    "email": "ningombamborishsingh@gmail.com",
+    "email": "ningombamborishsigh@gmail.com",
     "linkedin": "linkedin.com/in/ningombam-borish-singh-70b34a273",
     "linkedinUrl": "https://linkedin.com/in/ningombam-borish-singh-70b34a273",
     "website": "borishningombam.in",
@@ -46,6 +46,21 @@
   },
 
   "experience": [
+    {
+      "company": "Anshos Tech",
+      "role": "AI Edgebox Research Intern",
+      "location": "Vanagaram, Chennai, India (On-site)",
+      "period": "September 2026 – Present",
+      "bullets": [
+        "Working on AI Edgebox research and development, focusing on real-time computer vision, edge AI deployment, model integration, and intelligent safety monitoring systems."
+      ],
+      "tags": [
+        "AI Edgebox",
+        "Computer Vision",
+        "Edge AI",
+        "Safety Monitoring"
+      ]
+    },
     {
       "company": "Indian Institute of Technology Ropar (IIT Ropar)",
       "role": "Research Intern",

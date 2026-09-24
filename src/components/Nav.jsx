@@ -44,8 +44,8 @@ export default function Nav() {
     <>
       <nav className={`nav${scrolled ? " nav--scrolled" : ""}`} role="navigation" aria-label="Main navigation">
         <div className="nav-inner">
-          <a className="nav-logo" href="#top" onClick={() => handleNav("#top")}>
-            NBS<span>_</span>PORTFOLIO
+          <a className="nav-logo" href="#top" onClick={() => handleNav("#top")} style={{ display: 'flex', alignItems: 'center' }}>
+             Ningombam Borish Singh
           </a>
 
           {/* Desktop links */}

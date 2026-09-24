@@ -278,9 +278,14 @@ export default function ChatBot({ profile }) {
                 <span className="chat-online mono">● online</span>
               </div>
             </div>
-            <button className="chat-clear" onClick={clearChat} aria-label="Clear chat" title="Clear chat">
-              <Trash2 size={14} />
-            </button>
+            <div className="chat-head-actions" style={{ display: 'flex', gap: '8px' }}>
+              <button className="chat-clear" onClick={clearChat} aria-label="Clear chat" title="Clear chat">
+                <Trash2 size={14} />
+              </button>
+              <button className="chat-clear" onClick={() => setOpen(false)} aria-label="Close chat" title="Close chat">
+                <X size={16} />
+              </button>
+            </div>
           </div>
 
           <div className="chat-body" ref={scrollRef}>

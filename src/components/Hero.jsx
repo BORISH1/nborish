@@ -21,7 +21,7 @@ export default function Hero({ profile }) {
         <span className="hero-shape hero-shape--3" />
       </div>
 
-      <div className="hero-layout" style={{ display: 'flex', gap: '48px', alignItems: 'center', flexWrap: 'wrap-reverse' }}>
+      <div className="hero-layout" style={{ display: 'flex', gap: '32px', alignItems: 'center', flexWrap: 'wrap' }}>
         <div className="hero-content" style={{ flex: '1 1 500px', position: 'relative', zIndex: 1 }}>
           <div className="hero-status" aria-label="Status: Open to opportunities">
             <span className="pulse" aria-hidden="true" />
@@ -56,7 +56,7 @@ export default function Hero({ profile }) {
             </a>
             <a
               className="btn btn-outline"
-              href="https://drive.google.com/file/d/YOUR_RESUME_FILE_ID/view"
+              href="https://drive.google.com/file/d/1woI_ONg6TbRERBvM-Ie5rU7-TAbGH4KW/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
               aria-label="Download resume"
@@ -67,7 +67,7 @@ export default function Hero({ profile }) {
         </div>
         
         <div className="hero-image" style={{ flex: '1 1 300px', display: 'flex', justifyContent: 'center', position: 'relative', zIndex: 1 }}>
-          <div className="hero-profile-anim" style={{ position: 'relative', width: '100%', maxWidth: '380px', aspectRatio: '1/1' }}>
+          <div className="hero-profile-anim" style={{ position: 'relative', width: '100%', maxWidth: '300px', aspectRatio: '1/1' }}>
             <div className="hero-profile-glow" aria-hidden="true" />
             <img 
               src="/profile.png" 
