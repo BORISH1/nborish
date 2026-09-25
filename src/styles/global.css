@@ -1419,18 +1419,19 @@ footer {
 
 @media (max-width: 680px) {
   .chat-panel {
-    top: 10vh;
-    bottom: 10vh;
-    left: 10vw;
-    right: 10vw;
-    width: 80vw;
-    max-width: 80vw;
-    height: 80vh;
-    max-height: 80vh;
-    border-radius: 24px;
+    top: 32px;
+    bottom: 32px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    max-width: none;
+    height: auto;
+    max-height: none;
+    transform: none;
+    border-radius: 20px;
     border: 1px solid var(--panel-line);
     z-index: 9999;
-    animation: chatPopupMobile 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: chatPopupMobile 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
   
   .chat-panel::before {
@@ -1439,12 +1440,12 @@ footer {
 
   .chat-panel-head {
     padding: 20px 16px 16px;
-    border-radius: 24px 24px 0 0;
+    border-radius: 20px 20px 0 0;
   }
 
   .chat-input-row {
     padding-bottom: 16px;
-    border-radius: 0 0 24px 24px;
+    border-radius: 0 0 20px 20px;
   }
   
   .chat-bubble {
@@ -1454,8 +1455,8 @@ footer {
 }
 
 @keyframes chatPopupMobile {
-  from { opacity: 0; transform: scale(0.9) translateY(20px); }
-  to   { opacity: 1; transform: scale(1) translateY(0); }
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
 }
 
 /* =========================================================
