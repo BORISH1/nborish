@@ -336,7 +336,7 @@ section { padding: 88px 0; }
   backdrop-filter: var(--glass);
   -webkit-backdrop-filter: var(--glass);
   border-bottom: 1px solid var(--glass-border);
-  padding: 0;
+  padding: 6;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.35s ease, padding 0.35s ease;
@@ -418,6 +418,16 @@ section { padding: 88px 0; }
   padding-bottom: 48px;
   position: relative;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    margin: 4px auto !important;
+    top: 4px !important;
+  }
+  .hero {
+    padding-top: 10px !important;
+  }
 }
 
 /* Decorative floating shapes */
