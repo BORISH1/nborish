@@ -1,6 +1,8 @@
 import React from "react";
 import { Mail, Globe, Download } from "lucide-react";
-import { FaLinkedin as Linkedin, FaGithub as Github } from "react-icons/fa";
+import { FaLinkedin as Linkedin, FaGithub as Github, FaReact, FaNodeJs, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { SiTypescript, SiJavascript, SiTailwindcss, SiMongodb } from "react-icons/si";
+import { GiButterfly } from "react-icons/gi";
 import { Chip } from "./Primitives";
 import { useTypingEffect } from "../hooks/useTypingEffect";
 
@@ -80,6 +82,30 @@ export default function Hero({ profile }) {
                 zIndex: 2
               }} 
             />
+            {/* Floating Tech Icons */}
+            <div className="tech-icon-float tech-icon-float--1" aria-hidden="true">
+              <FaReact />
+            </div>
+            <div className="tech-icon-float tech-icon-float--2" aria-hidden="true">
+              <FaNodeJs />
+            </div>
+            <div className="tech-icon-float tech-icon-float--3" aria-hidden="true">
+              <SiJavascript />
+            </div>
+            <div className="tech-icon-float tech-icon-float--4" aria-hidden="true">
+              <SiTypescript />
+            </div>
+            <div className="tech-icon-float tech-icon-float--5" aria-hidden="true">
+              <SiTailwindcss />
+            </div>
+            <div className="tech-icon-float tech-icon-float--6" aria-hidden="true">
+              <SiMongodb />
+            </div>
+            
+            {/* Flying Butterfly */}
+            <div className="butterfly-anim" aria-hidden="true">
+              <GiButterfly />
+            </div>
           </div>
         </div>
       </div>
