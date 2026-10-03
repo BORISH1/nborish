@@ -4,7 +4,8 @@ import { Frame, Chip, SectionHead } from "./Primitives";
 import { useReveal } from "../hooks/useReveal";
 
 export default function About({ profile }) {
-  const [ref, visible] = useReveal();
+  const [statsRef, statsVisible] = useReveal();
+  const [gridRef, gridVisible] = useReveal();
 
   const stats = [
     { icon: <FolderKanban size={18} />, value: profile.projects.length, label: "Projects" },
@@ -18,7 +19,7 @@ export default function About({ profile }) {
       <SectionHead index="01" title="About" sub="Summary, education, and current research." />
 
       {/* Stats bar */}
-      <div className={`about-stats reveal${visible ? " revealed" : ""}`}>
+      <div ref={statsRef} className={`about-stats reveal${statsVisible ? " revealed" : ""}`}>
         {stats.map((s, i) => (
           <div className="about-stat" key={i}>
             <span className="about-stat-icon">{s.icon}</span>
@@ -28,7 +29,7 @@ export default function About({ profile }) {
         ))}
       </div>
 
-      <div ref={ref} className={`about-grid reveal${visible ? " revealed" : ""}`}>
+      <div ref={gridRef} className={`about-grid reveal${gridVisible ? " revealed" : ""}`}>
         <div className="about-summary">
           <p>{profile.summary}</p>
 
