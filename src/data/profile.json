@@ -17,7 +17,7 @@
     "websiteUrl": "https://borishningombam.in"
   },
 
-  "summary": "Computer Science undergraduate specializing in Artificial Intelligence and Machine Learning, with hands-on experience across AI research, computer vision, technical documentation, and full-stack development. Proficient in React.js, Next.js, Node.js, Express.js and PostgreSQL, and skilled at translating machine learning workflows into scalable, user-facing systems — as well as documenting the research behind them clearly. Currently researching explainable deep learning and hybrid CNN architectures for medical image analysis.",
+  "summary": "Computer Science undergraduate specializing in Artificial Intelligence and Machine Learning, with hands-on experience across AI research, computer vision, technical documentation, and full-stack development. Proficient in React.js, Next.js, Node.js, Express.js and PostgreSQL, and skilled at translating machine learning workflows into scalable, user-facing systems — as well as documenting the research behind them clearly. First author on peer-reviewed deep learning research accepted at IEEE IConAECC 2026 and currently developing explainable multi-modal medical AI frameworks.",
 
   "education": {
     "institution": "Rohini College of Engineering & Technology",
@@ -39,18 +39,60 @@
     ]
   },
 
-  "research": {
-    "status": "In Progress",
-    "title": "An Explainable Hybrid CNN Model with Adaptive Feature Fusion for Skin Lesion Diagnosis",
-    "description": "Exploring an explainable deep learning approach for skin lesion diagnosis using hybrid CNN architectures and adaptive feature fusion, focused on discriminative feature extraction, model interpretability, and diagnostic performance."
-  },
+  "research": [
+    {
+      "title": "Teacher-Guided Knowledge Distillation for Efficient Multi-Class Skin Lesion Classification: An Empirical Study",
+      "status": "Accepted for Presentation",
+      "role": "First Author",
+      "conference": "2026 Indian Conference on Advances in Electrical, Computers, and Communications (IConAECC 2026)",
+      "venue": "IEEE IConAECC 2026",
+      "year": "2026",
+      "area": "Medical AI · Model Compression",
+      "description": "An empirical study evaluating teacher-guided knowledge distillation techniques to compress heavy vision models into lightweight, efficient architectures for multi-class skin lesion classification in resource-constrained clinical settings.",
+      "highlights": [
+        "Evaluated teacher-student knowledge distillation architectures across multi-class dermatological datasets",
+        "Compressed heavy vision backbones while preserving high diagnostic sensitivity across minority disease classes",
+        "Accepted for oral presentation at IEEE IConAECC 2026"
+      ],
+      "tags": [
+        "Knowledge Distillation",
+        "Deep Learning",
+        "Skin Lesion Classification",
+        "Model Compression",
+        "Computer Vision"
+      ]
+    },
+    {
+      "title": "A Lightweight Skin Lesion Screening Framework with Dual Backbone Fusion, Uncertainty Estimation, and Evidence Grounded Medical RAG",
+      "status": "Under Review",
+      "role": "First Author",
+      "conference": null,
+      "venue": "International Journal / Conference Submission",
+      "year": "2026",
+      "area": "Explainable AI · Multi-Modal Triage",
+      "description": "Developing a lightweight skin lesion screening framework integrating dual-backbone feature fusion, uncertainty estimation, and evidence-grounded medical retrieval-augmented generation (RAG) for transparent, calibrated clinical triage.",
+      "highlights": [
+        "Dual-backbone feature fusion combining complementary CNN and Transformer representations",
+        "Calibrated uncertainty estimation to flag borderline and out-of-distribution clinical cases",
+        "Evidence-grounded medical RAG providing verifiable clinical literature explanations for triage"
+      ],
+      "tags": [
+        "Dual-Backbone Fusion",
+        "Medical RAG",
+        "Uncertainty Estimation",
+        "Explainable AI",
+        "Clinical Decision Support"
+      ]
+    }
+  ],  
+
 
   "experience": [
     {
       "company": "Anshos Tech",
       "role": "AI Edgebox Research Intern",
       "location": "Vanagaram, Chennai, India (On-site)",
-      "period": "September 2026 – Present",
+      "period": "September 2026 – October 2026",
       "bullets": [
         "Working on AI Edgebox research and development, focusing on real-time computer vision, edge AI deployment, model integration, and intelligent safety monitoring systems."
       ],

@@ -61,7 +61,12 @@ function generateResponse(text, profile, lastTopic) {
   // AI/ML specific
   else if (matchesAny(lower, ["ai", "ml", "machine learning", "artificial", "deep learning", "cnn", "yolo", "computer vision"])) {
     const aiSkills = profile.skills["AI/ML & Research"] || [];
-    response = `He specializes in AI/ML with skills in: ${aiSkills.join(", ")}.\n\nHe's currently researching: "${profile.research.title}"\n\n${profile.research.description}`;
+    const papers = Array.isArray(profile.research) ? profile.research : (profile.research ? [profile.research] : []);
+    const topPaper = papers[0];
+    const paperSummary = topPaper
+      ? `\n\n🔬 **Key Research:** "${topPaper.title}" (${topPaper.status})${topPaper.conference ? ` at ${topPaper.conference}` : ""}.`
+      : "";
+    response = `He specializes in AI/ML with skills in: ${aiSkills.join(", ")}.${paperSummary}\n\nHe has ${papers.length} first-author research manuscripts in deep learning and medical computer vision.`;
     topic = "ai";
     quickReplies = ["Research details", "SafeSight project", "Skin Disease project", "Skills overview"];
   }
@@ -87,10 +92,16 @@ function generateResponse(text, profile, lastTopic) {
     quickReplies = QUICK_REPLIES.general;
   }
   // Research
-  else if (matchesAny(lower, ["research", "paper", "thesis", "hybrid cnn", "skin lesion", "explainable"])) {
-    response = `📊 **Current Research** (${profile.research.status})\n\n"${profile.research.title}"\n\n${profile.research.description}`;
+  else if (matchesAny(lower, ["research", "paper", "papers", "publication", "publications", "thesis", "hybrid cnn", "skin lesion", "explainable", "knowledge distillation", "iconaecc"])) {
+    const papers = Array.isArray(profile.research) ? profile.research : (profile.research ? [profile.research] : []);
+    const paperList = papers.map((p, idx) => {
+      const conf = p.conference ? `\n   📍 **Conference:** ${p.conference}` : (p.venue ? `\n   📍 **Venue:** ${p.venue}` : "");
+      const role = p.role ? `\n   👤 **Role:** ${p.role}` : "";
+      return `**${idx + 1}. ${p.title}**\n   🏷️ **Status:** ${p.status}${role}${conf}\n   📝 ${p.description}`;
+    }).join("\n\n");
+    response = `📊 **Research & Publications**\n\nBorish is First Author on **${papers.length} research papers** focusing on deep learning and medical image triage:\n\n${paperList}`;
     topic = "research";
-    quickReplies = ["AI/ML skills", "Education", "Projects"];
+    quickReplies = ["AI/ML skills", "SafeSight project", "Experience", "Contact"];
   }
   // Contact
   else if (matchesAny(lower, ["contact", "email", "phone", "hire", "reach", "connect"])) {

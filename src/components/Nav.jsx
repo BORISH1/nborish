@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, Sun, Moon, User, Briefcase, Code, Terminal, Award, Mail } from "lucide-react";
+import { Menu, X, Sun, Moon, User, Briefcase, Code, Terminal, Award, Mail, BookOpen } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
 
 const NAV_LINKS = [
   { href: "#about",      label: "About",      icon: User },
+  { href: "#research",   label: "Research",   icon: BookOpen },
   { href: "#experience", label: "Experience", icon: Briefcase },
   { href: "#projects",   label: "Projects",   icon: Code },
   { href: "#skills",     label: "Skills",     icon: Terminal },
